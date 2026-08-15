@@ -1,379 +1,340 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- SEO & Meta tags -->
-  <title>André | Portfólio de Projetos & Desenvolvedor</title>
-  <meta name="description" content="Portfólio de projetos em desenvolvimento de software, Python, Ciência de Dados, Streamlit e Web Applications." />
-  <meta name="keywords" content="Desenvolvedor, Python, Streamlit, Portfólio, GitHub Pages, Full Stack, Data Science, Web" />
-  <meta name="author" content="André" />
+  <title>André Verzoto | Portfólio Profissional & Acadêmico</title>
+  <meta name="description" content="Trajetória profissional, formação acadêmica, projetos de pesquisa e desenvolvimento de software por André Verzoto." />
+  <meta name="author" content="André Verzoto" />
 
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="André | Portfólio de Projetos & Desenvolvedor" />
-  <meta property="og:description" content="Confira meus projetos desenvolvidos em Python, Ciência de Dados e Desenvolvimento Web no GitHub Pages." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80" />
-
-  <!-- Fontes & Ícones -->
+  <!-- Fontes & Ícones Discretos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Estilos Customizados -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Ambient Glow Background -->
-  <div class="bg-ambient">
-    <div class="ambient-blob blob-1"></div>
-    <div class="ambient-blob blob-2"></div>
-    <div class="ambient-blob blob-3"></div>
-  </div>
+  <div class="page-wrapper">
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#inicio" class="nav-logo" id="logo-link">
-        <span class="logo-badge">&lt;/&gt;</span>
-        <span>André<span class="gradient-text">.dev</span></span>
-      </a>
-
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#inicio" class="nav-link active">Início</a></li>
-          <li><a href="#projetos" class="nav-link">Projetos</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar Tema Claro/Escuro">
-          <i class="fas fa-sun"></i>
-        </button>
-        <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;" id="nav-github-btn">
-          <i class="fab fa-github"></i> <span>GitHub</span>
-        </a>
-        <button class="menu-toggle-btn" id="menu-toggle" aria-label="Abrir Menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <main>
-    <section id="inicio" class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            Disponível para novos projetos & parcerias
-          </div>
-
-          <h1 class="hero-title">
-            Criando software <br />
-            de alto impacto com <br />
-            <span class="gradient-text">código & tecnologia.</span>
-          </h1>
-
-          <div class="hero-subtitle">
-            Eu sou <span id="typing-text" class="gradient-text"></span><span class="typing-cursor">|</span>
-          </div>
-
-          <p class="hero-description">
-            Desenvolvo aplicações interativas, ferramentas de automação, pipelines de dados e soluções completas com foco em usabilidade, escalabilidade e design moderno.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projetos" class="btn btn-primary" id="hero-projects-btn">
-              <i class="fas fa-layer-group"></i> Ver Meus Projetos
-            </a>
-            <a href="#contato" class="btn btn-secondary" id="hero-contact-btn">
-              <i class="fas fa-paper-plane"></i> Entrar em Contato
-            </a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="social-btn" title="Perfil no GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="mailto:seu-email@exemplo.com" class="social-btn" title="Enviar Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
+    <!-- Cabeçalho de Perfil -->
+    <header class="profile-header">
+      <div class="profile-top">
+        <img src="ovo.gif" alt="Foto de perfil" class="profile-avatar" onerror="this.style.display='none'" />
+        <div class="profile-names">
+          <h1 class="profile-title">André Verzoto</h1>
+          <p class="profile-subtitle">Desenvolvimento de Software &bull; Análise de Dados &bull; Engenharia &bull; Pesquisa</p>
         </div>
+      </div>
 
-        <div class="hero-visual">
-          <div class="avatar-wrapper">
-            <div class="avatar-glow"></div>
-            <div class="avatar-card">
-              <img src="ovo.gif" alt="Foto de Perfil - André" class="avatar-img" />
-              <div class="avatar-details">
-                <div class="avatar-name">André</div>
-                <div class="avatar-role">Software Developer</div>
+      <p class="profile-bio">
+        Profissional e pesquisador com atuação focada no desenvolvimento de sistemas analíticos, processamento de dados e aplicações interativas. Experiência na união de métodos quantitativos, engenharia de software e ferramentas científicas para solução de problemas complexos.
+      </p>
+
+      <div class="profile-meta-links">
+        <a href="mailto:andreverzoto@gmail.com" class="meta-link">
+          <i class="far fa-envelope"></i> andreverzoto@gmail.com
+        </a>
+        <span class="meta-dot">&bull;</span>
+        <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="meta-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <span class="meta-dot">&bull;</span>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="meta-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- 1. Linha do Tempo Profissional -->
+      <section class="section-block">
+        <h2 class="section-heading">
+          <span class="section-number">01.</span> Experiência Profissional
+        </h2>
+
+        <div class="timeline">
+
+          <!-- Item Profissional 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-role">Engenharia de Software & Aplicações de Dados</span>
+              <span class="timeline-period">2023 — Presente</span>
+            </div>
+            <div class="timeline-institution">Desenvolvimento & Consultoria em Tecnologia</div>
+            <p class="timeline-desc">
+              Atuação no desenvolvimento de arquiteturas de software, automação de fluxos de trabalho e plataformas para análise estatística e tomada de decisão operacional.
+            </p>
+
+            <!-- Projetos Vinculados -->
+            <div class="linked-projects">
+              <div class="linked-projects-title">
+                <i class="fas fa-code-branch"></i> Projetos Desenvolvidos Nesta Atuação
+              </div>
+
+              <div class="project-item">
+                <div class="project-header-row">
+                  <span class="project-name">Plataforma Interativa de Simulação e Treinamento</span>
+                  <div class="project-links-row">
+                    <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="project-link-badge">
+                      <i class="fab fa-github"></i> Código
+                    </a>
+                  </div>
+                </div>
+                <p class="project-summary">
+                  Sistema web com persistência estruturada em banco de dados, painel administrativo e métricas analíticas de desempenho em tempo real.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Streamlit</span>
+                  <span class="tag">SQLite</span>
+                  <span class="tag">Data Analysis</span>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <div class="project-header-row">
+                  <span class="project-name">Simulador de Mercado & Modelagem Quantitativa</span>
+                  <div class="project-links-row">
+                    <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="project-link-badge">
+                      <i class="fab fa-github"></i> Código
+                    </a>
+                  </div>
+                </div>
+                <p class="project-summary">
+                  Interface de alta performance para cálculo de indicadores de risco, execução de simulações financeiras e visualização temporal.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Analytics</span>
+                  <span class="tag">Modelagem</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="floating-pill pill-1">
-              <i class="fab fa-python" style="color: #38bdf8; font-size: 1.1rem;"></i>
-              <span>Python & Data</span>
+          <!-- Item Profissional 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-role">Automação de Processos & Aquisição de Dados</span>
+              <span class="timeline-period">2021 — 2023</span>
             </div>
+            <div class="timeline-institution">Engenharia & Telemetria</div>
+            <p class="timeline-desc">
+              Desenvolvimento de scripts de integração para coleta de sinais, monitoramento contínuo de variáveis e tratamento de dados brutos para relatórios gerenciais.
+            </p>
 
-            <div class="floating-pill pill-2">
-              <i class="fas fa-code" style="color: #a855f7; font-size: 1.1rem;"></i>
-              <span>Modern Web</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <!-- Projetos Vinculados -->
+            <div class="linked-projects">
+              <div class="linked-projects-title">
+                <i class="fas fa-code-branch"></i> Projetos Desenvolvidos Nesta Atuação
+              </div>
 
-    <!-- Metrics Bar -->
-    <section class="metrics-section">
-      <div class="container">
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <div class="metric-number" id="metric-repos">15+</div>
-            <div class="metric-label">Repositórios & Projetos</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-number">100%</div>
-            <div class="metric-label">Código Limpo & Documentado</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-number">24/7</div>
-            <div class="metric-label">Hospedagem GitHub Pages</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-number">Fast</div>
-            <div class="metric-label">Performance & Responsividade</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projetos" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Portfólio</span>
-          <h2 class="section-title">Projetos em Destaque</h2>
-          <p class="section-desc">
-            Explore os trabalhos práticos que desenvolvi, com código-fonte aberto e demonstrações interativas.
-          </p>
-        </div>
-
-        <!-- GitHub Dynamic Sync Box -->
-        <div class="github-sync-bar">
-          <div class="sync-info">
-            <i class="fab fa-github" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
-            <div>
-              <strong>Deseja sincronizar com outro usuário do GitHub?</strong>
-              <div style="font-size: 0.8rem; color: var(--text-dim);">Insira seu username do GitHub para carregar seus repositórios automaticamente.</div>
+              <div class="project-item">
+                <div class="project-header-row">
+                  <span class="project-name">Sistema de Datalogging & Processamento de Sinais</span>
+                  <div class="project-links-row">
+                    <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="project-link-badge">
+                      <i class="fab fa-github"></i> Código
+                    </a>
+                  </div>
+                </div>
+                <p class="project-summary">
+                  Pipeline para leitura automatizada de sensores de vibração, filtragem de ruído espectral e exportação de relatórios técnicos.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Signal Processing</span>
+                  <span class="tag">IoT</span>
+                  <span class="tag">Data Logging</span>
+                </div>
+              </div>
             </div>
           </div>
-          <form class="sync-form" id="sync-form">
-            <input type="text" id="github-username-input" class="sync-input" placeholder="seu-usuario-github" value="andrevasc" />
-            <button type="submit" class="sync-btn" id="sync-btn">Sincronizar</button>
-          </form>
-        </div>
 
-        <!-- Controls: Filter and Search -->
-        <div class="projects-controls">
-          <div class="search-input-wrapper">
-            <i class="fas fa-search search-icon"></i>
-            <input type="text" id="search-input" class="search-input" placeholder="Pesquisar projetos por nome, tag ou tecnologia..." />
+        </div>
+      </section>
+
+      <!-- 2. Linha do Tempo Acadêmica & Pesquisa -->
+      <section class="section-block">
+        <h2 class="section-heading">
+          <span class="section-number">02.</span> Formação Acadêmica & Pesquisa
+        </h2>
+
+        <div class="timeline">
+
+          <!-- Item Acadêmico 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-role">Pesquisa Científica & Análise Bibliométrica</span>
+              <span class="timeline-period">2022 — 2024</span>
+            </div>
+            <div class="timeline-institution">Atividade Acadêmica & Produção Científica</div>
+            <p class="timeline-desc">
+              Investigação e estruturação de metodologias computacionais para mineração de literatura científica, análise de redes de coautoria e evolução temática de campos do conhecimento.
+            </p>
+
+            <!-- Projetos Vinculados -->
+            <div class="linked-projects">
+              <div class="linked-projects-title">
+                <i class="fas fa-book-open"></i> Projetos & Estudos Vinculados
+              </div>
+
+              <div class="project-item">
+                <div class="project-header-row">
+                  <span class="project-name">Pipeline de Mineração & Visualização Bibliométrica</span>
+                  <div class="project-links-row">
+                    <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="project-link-badge">
+                      <i class="fab fa-github"></i> Repositório
+                    </a>
+                  </div>
+                </div>
+                <p class="project-summary">
+                  Scripts e ferramentas integradas em R e Python (PyBibX) para extração de metadados, processamento de citações e geração de grafos de coocorrência.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">R</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Bibliometria</span>
+                  <span class="tag">Grafos</span>
+                  <span class="tag">NLP</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="filter-bar">
-            <button class="filter-btn active" data-category="all">Todos</button>
-            <button class="filter-btn" data-category="python">Python & Backend</button>
-            <button class="filter-btn" data-category="data">Ciência de Dados / IoT</button>
-            <button class="filter-btn" data-category="web">Web & Full Stack</button>
+          <!-- Item Acadêmico 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-role">Graduação / Formação em Engenharia</span>
+              <span class="timeline-period">Concluída</span>
+            </div>
+            <div class="timeline-institution">Ensino Superior</div>
+            <p class="timeline-desc">
+              Formação de base sólida em ciências exatas, cálculo numérico, métodos de otimização, modelagem computacional e estatística aplicada.
+            </p>
+
+            <!-- Projetos Vinculados -->
+            <div class="linked-projects">
+              <div class="linked-projects-title">
+                <i class="fas fa-graduation-cap"></i> Trabalhos & Projetos Acadêmicos
+              </div>
+
+              <div class="project-item">
+                <div class="project-header-row">
+                  <span class="project-name">Modelagem Numérica & Análise de Dados Experimentais</span>
+                  <div class="project-links-row">
+                    <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="project-link-badge">
+                      <i class="fas fa-file-alt"></i> Detalhes
+                    </a>
+                  </div>
+                </div>
+                <p class="project-summary">
+                  Implementação de algoritmos computacionais para tratamento de matrizes de medição e validação experimental de modelos teóricos.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Modelagem Matemática</span>
+                  <span class="tag">Estatística</span>
+                  <span class="tag">Algoritmos</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Projects Grid Container -->
-        <div class="projects-grid" id="projects-grid">
-          <!-- Renderizado dinamicamente via script.js -->
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="habilidades" class="section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Tech Stack</span>
-          <h2 class="section-title">Habilidades & Tecnologias</h2>
-          <p class="section-desc">Ferramentas e linguagens que utilizo no dia a dia para construir soluções eficientes.</p>
-        </div>
+      <!-- 3. Competências Técnicas -->
+      <section class="section-block">
+        <h2 class="section-heading">
+          <span class="section-number">03.</span> Competências Técnicas
+        </h2>
 
         <div class="skills-grid">
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="category-icon"><i class="fab fa-python"></i></div>
-              <h3 class="skill-category-title">Backend & Python</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
-              <span class="skill-chip"><i class="fas fa-bolt"></i> FastAPI</span>
-              <span class="skill-chip"><i class="fas fa-chart-line"></i> Streamlit</span>
-              <span class="skill-chip"><i class="fas fa-server"></i> REST APIs</span>
-              <span class="skill-chip"><i class="fas fa-database"></i> SQLite / PostgreSQL</span>
-            </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Linguagens & Backend</div>
+            <div class="skill-cat-items">Python, R, JavaScript, SQL, Bash/Shell Scripting.</div>
           </div>
 
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="category-icon"><i class="fas fa-chart-pie"></i></div>
-              <h3 class="skill-category-title">Dados & Analytics</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="skill-chip"><i class="fas fa-table"></i> Pandas / NumPy</span>
-              <span class="skill-chip"><i class="fas fa-chart-area"></i> Matplotlib & Seaborn</span>
-              <span class="skill-chip"><i class="fab fa-r-project"></i> Linguagem R</span>
-              <span class="skill-chip"><i class="fas fa-brain"></i> Machine Learning</span>
-              <span class="skill-chip"><i class="fas fa-microchip"></i> IoT & Sinais</span>
-            </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Ciência de Dados & Análise</div>
+            <div class="skill-cat-items">Pandas, NumPy, Matplotlib, Seaborn, Modelagem Estatística, Bibliometria.</div>
           </div>
 
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="category-icon"><i class="fab fa-js-square"></i></div>
-              <h3 class="skill-category-title">Frontend & Web</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="skill-chip"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
-              <span class="skill-chip"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
-              <span class="skill-chip"><i class="fab fa-react"></i> React / Next.js</span>
-              <span class="skill-chip"><i class="fas fa-mobile-alt"></i> Design Responsivo</span>
-              <span class="skill-chip"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
-            </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Sistemas & Interfaces</div>
+            <div class="skill-cat-items">Streamlit, FastAPI, REST APIs, HTML5/CSS3, SQLite, PostgreSQL.</div>
           </div>
 
-          <div class="skill-category-card">
-            <div class="skill-category-header">
-              <div class="category-icon"><i class="fas fa-tools"></i></div>
-              <h3 class="skill-category-title">DevOps & Ferramentas</h3>
-            </div>
-            <div class="skill-chips">
-              <span class="skill-chip"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-              <span class="skill-chip"><i class="fab fa-github"></i> GitHub Pages / Actions</span>
-              <span class="skill-chip"><i class="fab fa-docker"></i> Docker</span>
-              <span class="skill-chip"><i class="fas fa-terminal"></i> Shell & Automação</span>
-              <span class="skill-chip"><i class="fas fa-laptop-code"></i> VS Code & IDEs</span>
-            </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Ferramentas & Metodologia</div>
+            <div class="skill-cat-items">Git, GitHub Pages, Linux, VS Code, Documentação Técnica, LaTeX.</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="sobre" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Trajetória</span>
-          <h2 class="section-title">Sobre Mim</h2>
-          <p class="section-desc">Um resumo do meu foco profissional e forma de trabalhar.</p>
-        </div>
+      <!-- 4. Contato Direto & Envio de Mensagem -->
+      <section class="section-block">
+        <h2 class="section-heading">
+          <span class="section-number">04.</span> Enviar Mensagem / Contato
+        </h2>
 
-        <div class="about-card">
-          <div class="about-text">
-            <p>
-              Sou um desenvolvedor apaixonado por transformar desafios complexos em soluções digitais intuitivas, ágeis e eficientes.
-            </p>
-            <p>
-              Tenho experiência prática no desenvolvimento de aplicações interativas completas, engenharia de dados com Python e R, criação de dashboards interativos e automação de rotinas.
-            </p>
-            <p>
-              Busco sempre adotar boas práticas de engenharia de software: modularidade, testes, código limpo e arquitetura bem estruturada.
-            </p>
+        <div class="contact-card">
+          <p class="contact-intro">
+            Para propostas profissionais, colaborações em pesquisa ou esclarecimento de dúvidas, utilize o formulário abaixo ou envie um e-mail diretamente.
+          </p>
+
+          <div class="contact-email-badge">
+            <i class="far fa-envelope"></i>
+            <span id="email-val">andreverzoto@gmail.com</span>
+            <button class="copy-btn" id="copy-email-btn" title="Copiar e-mail">
+              <i class="far fa-copy"></i>
+            </button>
           </div>
 
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <i class="fas fa-rocket highlight-icon"></i>
-              <div>
-                <h4 class="highlight-title">Foco em Resultados Rápidos</h4>
-                <p class="highlight-desc">Entrega contínua de protótipos funcionais e aplicações prontas para produção.</p>
-              </div>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Seu Nome</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Ex.: João Silva" required />
             </div>
 
-            <div class="highlight-item">
-              <i class="fas fa-code-branch highlight-icon"></i>
-              <div>
-                <h4 class="highlight-title">Open Source & Colaboração</h4>
-                <p class="highlight-desc">Compartilhamento de código no GitHub com documentação e clareza.</p>
-              </div>
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Assunto</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="Ex.: Oportunidade / Consulta sobre projeto" required />
             </div>
 
-            <div class="highlight-item">
-              <i class="fas fa-shield-alt highlight-icon"></i>
-              <div>
-                <h4 class="highlight-title">Confiabilidade & Qualidade</h4>
-                <p class="highlight-desc">Design responsivo, boas práticas de segurança e otimização de performance.</p>
-              </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Mensagem</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Descreva sua mensagem ou proposta..." required></textarea>
             </div>
-          </div>
+
+            <button type="submit" class="form-submit-btn">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem para andreverzoto@gmail.com
+            </button>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="section">
-      <div class="container">
-        <div class="contact-container">
-          <div class="contact-content">
-            <span class="section-tag">Conexão</span>
-            <h2 class="section-title">Vamos Construir Algo Incrível?</h2>
-            <p class="section-desc">
-              Tem um projeto em mente, uma oportunidade ou quer trocar uma ideia sobre tecnologia? Sinta-se à vontade para me enviar uma mensagem.
-            </p>
+    </main>
 
-            <div class="contact-email-box">
-              <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
-              <span id="contact-email-text">seu-email@exemplo.com</span>
-              <button class="copy-btn" onclick="copyEmail('seu-email@exemplo.com')" title="Copiar e-mail">
-                <i class="far fa-copy"></i>
-              </button>
-            </div>
+    <!-- Rodapé Discreto -->
+    <footer class="page-footer">
+      <span>André Verzoto &copy; 2026</span>
+      <span>Hospedado via GitHub Pages</span>
+    </footer>
 
-            <div class="hero-actions" style="justify-content: center; margin-top: 10px;">
-              <a href="mailto:seu-email@exemplo.com" class="btn btn-primary">
-                <i class="fas fa-envelope"></i> Enviar um E-mail
-              </a>
-              <a href="https://github.com/andrevasc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                <i class="fab fa-github"></i> Visitar GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© 2026 André. Hospedado gratuitamente com GitHub Pages.</p>
-      <p style="font-size: 0.8rem; opacity: 0.7;">Desenvolvido com HTML5, CSS3 Moderno e JavaScript Vanilla.</p>
-    </div>
-  </footer>
+  <div id="toast" class="toast-msg">Email copiado</div>
 
-  <!-- Toast Notification Container -->
-  <div id="toast" class="toast">Notificação</div>
-
-  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

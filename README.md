@@ -22,6 +22,7 @@ portfolio-github-pages/
 ├── index.html       # Estrutura principal da página (SEO, seções, layout)
 ├── style.css        # Folha de estilos (Design System, cores, glassmorphism)
 ├── script.js        # Lógica interativa (Filtros, busca, GitHub API, temas)
+├── ovo.gif          # Sua foto/GIF de perfil
 └── README.md        # Guia de publicação no GitHub Pages
 ```
 

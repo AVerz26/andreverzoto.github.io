@@ -1,33 +1,62 @@
-// Script Minimalista & Formal para Portfólio
+// Modern Academic Portfolio Script
 
-const EMAIL_DESTINO = "andreverzoto@gmail.com";
+const CONTACT_EMAIL = "andreverzoto@gmail.com";
 
-// Função para exibir mensagem toast discreta
-function showToast(mensagem) {
+// Toast notification helper
+function showToast(message) {
   const toast = document.getElementById("toast");
   if (!toast) return;
-  toast.textContent = mensagem;
+  toast.textContent = message;
   toast.classList.add("show");
   setTimeout(() => {
     toast.classList.remove("show");
-  }, 3000);
+  }, 2500);
 }
 
-// Copiar e-mail para a área de transferência
+// Dark / Light Theme Toggle
+function initThemeToggle() {
+  const themeBtn = document.getElementById("theme-toggle");
+  if (!themeBtn) return;
+
+  const currentTheme = localStorage.getItem("theme") || 
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  updateThemeIcon(currentTheme);
+
+  themeBtn.addEventListener("click", () => {
+    const activeTheme = document.documentElement.getAttribute("data-theme");
+    const nextTheme = activeTheme === "dark" ? "light" : "dark";
+
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    updateThemeIcon(nextTheme);
+  });
+}
+
+function updateThemeIcon(theme) {
+  const themeBtn = document.getElementById("theme-toggle");
+  if (!themeBtn) return;
+  themeBtn.innerHTML = theme === "dark" 
+    ? '<i class="fas fa-sun"></i>' 
+    : '<i class="fas fa-moon"></i>';
+}
+
+// Copy email to clipboard
 function initCopyEmail() {
   const copyBtn = document.getElementById("copy-email-btn");
   if (!copyBtn) return;
 
   copyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(EMAIL_DESTINO).then(() => {
-      showToast("E-mail copiado para a área de transferência");
+    navigator.clipboard.writeText(CONTACT_EMAIL).then(() => {
+      showToast("Email copied to clipboard");
     }).catch(() => {
-      showToast("E-mail: " + EMAIL_DESTINO);
+      showToast("Email: " + CONTACT_EMAIL);
     });
   });
 }
 
-// Tratamento do Formulário de Contato Direto
+// Handle contact form submission
 function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
@@ -41,20 +70,20 @@ function initContactForm() {
 
     if (!message) return;
 
-    const emailSubject = encodeURIComponent(`[Contato Portfólio] ${subject} - ${name}`);
+    const emailSubject = encodeURIComponent(`[Inquiry] ${subject} - ${name}`);
     const emailBody = encodeURIComponent(
-      `Olá André,\n\nMeu nome é ${name}.\n\nMensagem:\n${message}\n\n---\nEnviado através do formulário de contato do portfólio.`
+      `Hi André,\n\nMy name is ${name}.\n\nMessage:\n${message}\n\n---\nSent from your portfolio contact form.`
     );
 
-    // Abre o cliente de e-mail padrão do usuário já com o destinatário, assunto e corpo prontos
-    const mailtoUrl = `mailto:${EMAIL_DESTINO}?subject=${emailSubject}&body=${emailBody}`;
+    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${emailSubject}&body=${emailBody}`;
     
     window.location.href = mailtoUrl;
-    showToast("Abrindo seu aplicativo de e-mail...");
+    showToast("Opening email client...");
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
   initCopyEmail();
   initContactForm();
 });

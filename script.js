@@ -1,6 +1,6 @@
 // --- Configuração Personalizável Inicial ---
 // Você pode alterar o seu usuário do GitHub e informações aqui!
-const GITHUB_USERNAME = "andrevasc"; // Coloque seu usuário do GitHub aqui
+const GITHUB_USERNAME = "AVerz26"; // Coloque seu usuário do GitHub aqui
 
 // Projetos em Destaque Manuais (com dados detalhados, tags e previews)
 const FEATURED_PROJECTS = [

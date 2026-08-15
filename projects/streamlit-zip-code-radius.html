@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Streamlit Zip Code Radius App | André Verzoto</title>
+  <meta name="description" content="Geographical radius and postal zip code generator tool built with Python, Streamlit, and Excel." />
+  <meta name="author" content="André Verzoto" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">
+        <i class="fas fa-arrow-left" style="font-size: 0.9rem;"></i>
+        <span>André Verzoto</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Overview</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Timeline</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <article style="padding: 30px 0 60px;">
+      
+      <!-- Breadcrumb -->
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+        <a href="../index.html" style="color: inherit; text-decoration: none;">Home</a> &gt; 
+        <a href="../index.html#experience" style="color: inherit; text-decoration: none;">Projects</a> &gt; 
+        <span style="color: var(--text-main); font-weight: 500;">Zip Code Radius App</span>
+      </div>
+
+      <!-- Title & Headline -->
+      <h1 style="font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 12px; color: var(--text-main);">
+        Streamlit Zip Code Radius App
+      </h1>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 24px;">
+        <span class="tag-badge" style="font-size: 0.82rem; padding: 4px 10px;">
+          <i class="fas fa-map-marker-alt"></i> Spatial Data & Automation
+        </span>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+          Python &bull; Streamlit &bull; Geocoding &bull; Excel
+        </span>
+      </div>
+
+      <!-- Project Metadata Grid -->
+      <div class="skills-container" style="margin-bottom: 30px;">
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fas fa-user-tag"></i> Role</div>
+          <div class="skill-box-desc">Full-Stack Python Tool Developer</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fas fa-code"></i> Technologies</div>
+          <div class="skill-box-desc">Python, Streamlit, OpenPyXL, Geocoding APIs, Pandas</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fab fa-github"></i> Repository</div>
+          <div class="skill-box-desc">
+            <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">github.com/AVerz26</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Screenshot -->
+      <div class="project-img-container" style="margin-bottom: 36px;">
+        <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/Captura%20de%20tela%202025-09-01%20112029.png" alt="Zip Code Radius App Interface" class="project-img-preview" />
+      </div>
+
+      <!-- Section: Project Overview -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-compass"></i> Problem Statement & Goal</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+          Logistics coordinators, field sales representatives, and service technicians frequently need to identify all postal codes within a specific geographic radial perimeter around an epicenter city or distribution hub.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          This application automates radius calculations, querying geographic coordinates and generating an instant Excel spreadsheet ready for routing and regional campaign distribution.
+        </p>
+      </section>
+
+      <!-- Section: Workflow & Implementation -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-microchip"></i> Features & Technical Highlights</h2>
+        <ul class="project-bullets" style="margin-left: 24px; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Input Parameters:</strong> Simple inputs for city name, state/region, and target radius in kilometers or miles.</li>
+          <li><strong>Spatial Distance Computation:</strong> Uses haversine distance modeling to evaluate proximity from the center coordinates.</li>
+          <li><strong>Clean Spreadsheet Export:</strong> Formats zip codes, neighborhood names, and estimated distances into structured <code>.xlsx</code> files with one-click download.</li>
+        </ul>
+      </section>
+
+      <!-- Navigation Footer Back -->
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <a href="fuel-price-dashboard.html" class="unit-link" style="padding: 8px 16px;">
+          <i class="fas fa-arrow-left"></i> Previous Project
+        </a>
+        <a href="../index.html#experience" class="unit-link" style="padding: 8px 16px;">
+          Back to Main Timeline <i class="fas fa-home"></i>
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>&copy; 2026 André Verzoto. All rights reserved.</div>
+      <div><a href="../index.html" style="color: inherit; text-decoration: underline;">Return to Main Portfolio</a></div>
+    </footer>
+
+  </div>
+
+  <div id="toast" class="toast-msg">Email copied</div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

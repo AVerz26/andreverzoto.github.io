@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Streamlit Leads Finder App | André Verzoto</title>
+  <meta name="description" content="Automated B2B lead enrichment tool using Python, web scraping, and interactive Streamlit dashboards." />
+  <meta name="author" content="André Verzoto" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">
+        <i class="fas fa-arrow-left" style="font-size: 0.9rem;"></i>
+        <span>André Verzoto</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Overview</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Timeline</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <article style="padding: 30px 0 60px;">
+      
+      <!-- Breadcrumb -->
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+        <a href="../index.html" style="color: inherit; text-decoration: none;">Home</a> &gt; 
+        <a href="../index.html#experience" style="color: inherit; text-decoration: none;">Projects</a> &gt; 
+        <span style="color: var(--text-main); font-weight: 500;">Streamlit Leads Finder</span>
+      </div>
+
+      <!-- Title & Headline -->
+      <h1 style="font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 12px; color: var(--text-main);">
+        Streamlit Leads Finder App
+      </h1>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 24px;">
+        <span class="tag-badge" style="font-size: 0.82rem; padding: 4px 10px;">
+          <i class="fas fa-search-location"></i> B2B Prospecting & Web Scraping
+        </span>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+          Python &bull; Streamlit &bull; BeautifulSoup &bull; Pandas
+        </span>
+      </div>
+
+      <!-- Project Metadata Grid -->
+      <div class="skills-container" style="margin-bottom: 30px;">
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fas fa-user-tag"></i> Role</div>
+          <div class="skill-box-desc">Python Developer & Data Specialist</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fas fa-code"></i> Technologies</div>
+          <div class="skill-box-desc">Python, Streamlit, BeautifulSoup (BS4), Requests, Pandas, Folium</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fab fa-github"></i> Repository</div>
+          <div class="skill-box-desc">
+            <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">github.com/AVerz26</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Screenshot -->
+      <div class="project-img-container" style="margin-bottom: 36px;">
+        <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/photo.png" alt="Streamlit Leads Finder Interface" class="project-img-preview" />
+      </div>
+
+      <!-- Section: Overview & Core Features -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-bullseye"></i> Problem Statement & Goal</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+          Outbound sales and market research teams often spend hundreds of hours manually searching company directories, visiting individual corporate websites, and hunting for contact details.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          The goal of this application was to create a zero-friction, automated prospecting machine that allows a user to specify an industry and location, automatically harvest qualified business websites, and enrich them with verified contact data in real-time.
+        </p>
+      </section>
+
+      <!-- Section: Architecture & Capabilities -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Workflow & Key Features</h2>
+        <ul class="project-bullets" style="margin-left: 24px; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Targeted Geolocation Search:</strong> User selects an industry vertical (e.g., manufacturing, logistics, software) and target city/radius.</li>
+          <li><strong>Asynchronous Crawler Engine:</strong> Scrapes search indices to identify target domains and navigates deep internal pages (e.g., <code>/contact</code>, <code>/about</code>, <code>/team</code>).</li>
+          <li><strong>Contact Detail Extraction:</strong> Parses raw HTML to identify and validate corporate email patterns and public LinkedIn company/executive profile URLs.</li>
+          <li><strong>Unified DataFrame & Export:</strong> De-duplicates, normalizes phone numbers/emails, and compiles findings into clean tabular datasets.</li>
+          <li><strong>Interactive Map Visualization:</strong> Pinpoints prospect locations on a responsive Map view directly within the Streamlit interface.</li>
+        </ul>
+      </section>
+
+      <!-- Navigation Footer Back -->
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <a href="egg-carton-traceability.html" class="unit-link" style="padding: 8px 16px;">
+          <i class="fas fa-arrow-left"></i> Previous Project
+        </a>
+        <a href="fuel-price-dashboard.html" class="unit-link" style="padding: 8px 16px;">
+          Next: Fuel Price Tracker <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>&copy; 2026 André Verzoto. All rights reserved.</div>
+      <div><a href="../index.html" style="color: inherit; text-decoration: underline;">Return to Main Portfolio</a></div>
+    </footer>
+
+  </div>
+
+  <div id="toast" class="toast-msg">Email copied</div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

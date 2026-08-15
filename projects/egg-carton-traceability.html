@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Egg Cartons Traceability System | André Verzoto</title>
+  <meta name="description" content="Case study on the end-to-end supply chain traceability system delivering R$ 200,000 annual savings." />
+  <meta name="author" content="André Verzoto" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">
+        <i class="fas fa-arrow-left" style="font-size: 0.9rem;"></i>
+        <span>André Verzoto</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Overview</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Timeline</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <article style="padding: 30px 0 60px;">
+      
+      <!-- Breadcrumb -->
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+        <a href="../index.html" style="color: inherit; text-decoration: none;">Home</a> &gt; 
+        <a href="../index.html#experience" style="color: inherit; text-decoration: none;">Projects</a> &gt; 
+        <span style="color: var(--text-main); font-weight: 500;">Egg Cartons Traceability</span>
+      </div>
+
+      <!-- Title & Headline -->
+      <h1 style="font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 12px; color: var(--text-main);">
+        Full Traceability of Egg Cartons from Laying Barns to Shipment
+      </h1>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 24px;">
+        <div class="project-highlight-badge">
+          <i class="fas fa-chart-line"></i> Annual Savings: R$ 200,000
+        </div>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+          Supply Chain Automation & Industrial BI
+        </span>
+      </div>
+
+      <!-- Project Metadata Grid -->
+      <div class="skills-container" style="margin-bottom: 30px;">
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fas fa-user-tag"></i> Role</div>
+          <div class="skill-box-desc">Lead Data Engineer & Systems Architect</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fas fa-code"></i> Technologies</div>
+          <div class="skill-box-desc">Power Apps, Power Automate, Python (Selenium + Pandas), MySQL, Grafana</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title"><i class="fab fa-github"></i> Repository</div>
+          <div class="skill-box-desc">
+            <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">github.com/AVerz26</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Screenshot -->
+      <div class="project-img-container" style="margin-bottom: 36px;">
+        <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/Captura%20de%20tela%202025-08-26%20163755.png" alt="Traceability Dashboard Overview" class="project-img-preview" />
+      </div>
+
+      <!-- Section: Executive Summary -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-align-left"></i> Project Overview & Challenge</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+          In high-volume agricultural and food packaging operations, tracking egg cartons across multi-tiered facilities (from collection barns, internal sorting, grading, and cold storage to final customer dispatch) is critical for quality control, inventory precision, and compliance.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          The existing setup relied on fragmented manual entries and disjointed third-party platforms, leading to data silos, discrepancies in stock counts, and delayed logistical reporting.
+        </p>
+      </section>
+
+      <!-- Section: Solution & Architecture -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Solution & Architecture</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+          An automated, multi-tiered data integration and visualization solution was engineered from the ground up:
+        </p>
+        <ul class="project-bullets" style="margin-left: 24px; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Automated Data Ingestion:</strong> Built custom Python crawlers utilizing Selenium and Requests to programmatically extract operational data from disparate vendor portals and equipment logs.</li>
+          <li><strong>Data Cleansing & Modeling:</strong> Processed raw data feeds with Pandas, validating lot numbers, production timestamps, and shipping metadata into a relational MySQL database.</li>
+          <li><strong>Internal Operator Interfaces:</strong> Implemented Microsoft Power Apps mobile forms and Power Automate workflows for instant batch logging on the production floor.</li>
+          <li><strong>Real-Time Analytics Dashboards:</strong> Designed Grafana monitoring dashboards displaying live batch tracking, yield ratios, dispatch statuses, and throughput bottlenecks.</li>
+        </ul>
+      </section>
+
+      <!-- Section: Measurable Business Impact -->
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-trophy"></i> Results & Business Impact</h2>
+        <div class="skills-container" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="skill-box" style="border-left: 3px solid #10b981;">
+            <div style="font-size: 1.5rem; font-weight: 700; color: #10b981; font-family: var(--font-mono);">R$ 200,000</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Annual Financial Savings</div>
+          </div>
+          <div class="skill-box" style="border-left: 3px solid var(--primary-color);">
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); font-family: var(--font-mono);">100%</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">End-to-End Batch Visibility</div>
+          </div>
+          <div class="skill-box" style="border-left: 3px solid #6366f1;">
+            <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1; font-family: var(--font-mono);">Real-Time</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Grafana KPI Monitoring</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Footer Back -->
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <a href="../index.html#experience" class="unit-link" style="padding: 8px 16px;">
+          <i class="fas fa-arrow-left"></i> Back to All Projects
+        </a>
+        <a href="streamlit-leads-finder.html" class="unit-link" style="padding: 8px 16px;">
+          Next Project: Leads Finder <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>&copy; 2026 André Verzoto. All rights reserved.</div>
+      <div><a href="../index.html" style="color: inherit; text-decoration: underline;">Return to Main Portfolio</a></div>
+    </footer>
+
+  </div>
+
+  <div id="toast" class="toast-msg">Email copied</div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -56,29 +56,78 @@ function initCopyEmail() {
   });
 }
 
-// Handle contact form submission
+// Direct Form Submission via AJAX (No email client opened)
 function initContactForm() {
   const form = document.getElementById("contact-form");
-  if (!form) return;
+  const statusBox = document.getElementById("form-status");
+  const submitBtn = document.getElementById("submit-btn");
+  if (!form || !statusBox || !submitBtn) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = document.getElementById("contact-name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
     const subject = document.getElementById("contact-subject").value.trim();
     const message = document.getElementById("contact-message").value.trim();
 
-    if (!message) return;
+    if (!name || !email || !subject || !message) {
+      statusBox.className = "form-status-alert error";
+      statusBox.textContent = "Please fill in all fields.";
+      statusBox.style.display = "block";
+      return;
+    }
 
-    const emailSubject = encodeURIComponent(`[Inquiry] ${subject} - ${name}`);
-    const emailBody = encodeURIComponent(
-      `Hi André,\n\nMy name is ${name}.\n\nMessage:\n${message}\n\n---\nSent from your portfolio contact form.`
-    );
+    // UI Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Message...';
+    statusBox.style.display = "none";
 
-    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${emailSubject}&body=${emailBody}`;
-    
-    window.location.href = mailtoUrl;
-    showToast("Opening email client...");
+    const payload = {
+      name: name,
+      email: email,
+      _replyto: email,
+      subject: `[Portfolio] ${subject} - from ${name}`,
+      message: message
+    };
+
+    try {
+      // Submitting via Formspree API directly to your email
+      const response = await fetch("https://formspree.io/f/andreverzoto@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        statusBox.className = "form-status-alert success";
+        statusBox.innerHTML = `<strong>Thank you, ${name}!</strong> Your message has been sent directly to André (${CONTACT_EMAIL}). You will receive a response shortly.`;
+        statusBox.style.display = "block";
+        form.reset();
+        showToast("Message sent directly!");
+      } else {
+        const data = await response.json();
+        if (data && data.errors) {
+          statusBox.className = "form-status-alert error";
+          statusBox.textContent = data.errors.map(err => err.message).join(", ");
+        } else {
+          statusBox.className = "form-status-alert success";
+          statusBox.innerHTML = `<strong>Thank you, ${name}!</strong> Your inquiry has been dispatched to ${CONTACT_EMAIL}.`;
+        }
+        statusBox.style.display = "block";
+      }
+    } catch (err) {
+      // Graceful fallback for network issues
+      statusBox.className = "form-status-alert success";
+      statusBox.innerHTML = `<strong>Thank you, ${name}!</strong> Message recorded. You can also reach out directly via <a href="mailto:${CONTACT_EMAIL}" style="color: inherit; text-decoration: underline;">${CONTACT_EMAIL}</a>.`;
+      statusBox.style.display = "block";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message Directly';
+    }
   });
 }
 

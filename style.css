@@ -26,6 +26,10 @@
   --highlight-text: #065f46;
   --highlight-border: #a7f3d0;
 
+  --success-bg: #d1fae5;
+  --success-text: #065f46;
+  --success-border: #6ee7b7;
+
   --nav-bg: rgba(255, 255, 255, 0.95);
   --timeline-line: #dee2e6;
   --timeline-dot-border: #495057;
@@ -57,6 +61,10 @@
   --highlight-badge: #064e3b;
   --highlight-text: #6ee7b7;
   --highlight-border: #047857;
+
+  --success-bg: #064e3b;
+  --success-text: #a7f3d0;
+  --success-border: #059669;
 
   --nav-bg: rgba(18, 18, 18, 0.95);
   --timeline-line: #333333;
@@ -204,18 +212,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 170px;
+  width: 160px;
   flex-shrink: 0;
 }
 
 .profile-avatar {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border-color);
   background-color: var(--bg-subtle);
   margin-bottom: 14px;
+  aspect-ratio: 1 / 1;
 }
 
 .social-icons-row {
@@ -394,7 +403,7 @@ body {
 }
 
 .project-unit {
-  padding: 16px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -453,14 +462,14 @@ body {
 
 .project-highlight-badge {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
   background-color: var(--highlight-badge);
   color: var(--highlight-text);
   border: 1px solid var(--highlight-border);
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-sm);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .project-unit-desc {
@@ -481,13 +490,26 @@ body {
   margin-bottom: 4px;
 }
 
-.project-img-preview {
+/* Image Container - Undistorted, centered, natural ratio */
+.project-img-container {
   width: 100%;
-  max-width: 100%;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  margin: 8px 0 12px;
   background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  margin: 12px 0 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img-preview {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 4px;
   display: block;
 }
 
@@ -542,7 +564,7 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 26px;
 }
 
 .contact-direct-box {
@@ -588,7 +610,7 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .form-row {
@@ -605,14 +627,14 @@ body {
 
 .form-label {
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-main);
 }
 
 .form-control {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
-  padding: 9px 12px;
+  font-size: 0.92rem;
+  padding: 10px 12px;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   background-color: var(--bg-body);
@@ -622,10 +644,11 @@ body {
 .form-control:focus {
   outline: none;
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
 }
 
 textarea.form-control {
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
 }
 
@@ -635,8 +658,8 @@ textarea.form-control {
   color: #ffffff;
   border: none;
   border-radius: var(--radius-sm);
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 11px 24px;
+  font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
@@ -646,6 +669,34 @@ textarea.form-control {
 
 .submit-btn:hover {
   background-color: var(--primary-hover);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Status message box inside form */
+.form-status-alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  display: none;
+  margin-top: 4px;
+}
+
+.form-status-alert.success {
+  display: block;
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.form-status-alert.error {
+  display: block;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
 }
 
 /* Footer */

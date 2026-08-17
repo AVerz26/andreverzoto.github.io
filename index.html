@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>André Verzoto | Data Science & Engineering Portfolio</title>
+
+  <title>André Verzoto | Data Science &amp; Engineering</title>
   <meta name="description" content="Mechanical Engineer and Data Science Specialist. Portfolio of automation, web scraping, Streamlit applications, and analytics dashboards by André Verzoto." />
   <meta name="author" content="André Verzoto" />
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
 
@@ -19,16 +19,13 @@
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar">
     <div class="container nav-inner">
-      <a href="#about" class="nav-brand">
-        <span>André Verzoto</span>
-      </a>
 
       <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#experience" class="nav-link">Projects & Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -41,296 +38,233 @@
     </div>
   </nav>
 
-  <div class="container">
+  <!-- ==================== HERO / PROFILE HEADER ==================== -->
+  <header class="hero-section" id="about">
+    <div class="container hero-inner">
 
-    <!-- Profile Header Section -->
-    <header id="about" class="profile-section">
-      <div class="profile-layout">
-        <div class="profile-text">
-          <h1 class="profile-name">André Verzoto</h1>
-          <p class="profile-headline">Mechanical Engineer &bull; MBA in Data Science & Analytics (ESALQ/USP)</p>
-          
-          <p class="profile-bio">
-            I am a Mechanical Engineer graduated from <strong>UNESP – Ilha Solteira</strong> and hold an MBA in Data Science & Analytics from <strong>ESALQ/USP</strong>, with a strong passion for extracting data from diverse sources, integrating it, and transforming it into actionable insights that drive informed decision-making.
-          </p>
+      <!-- Text block -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">Mechanical Engineer &amp; Data Science MBA</p>
+        <h1 class="hero-name">André Verzoto</h1>
+        <p class="hero-headline">
+          Data Specialist &nbsp;·&nbsp; Automation &amp; BI Solutions
+        </p>
+        <p class="hero-bio">
+          Graduated in Mechanical Engineering from <strong>UNESP – Ilha Solteira</strong> and
+          MBA in Data Science &amp; Analytics from <strong>ESALQ/USP</strong>. I design
+          automated data pipelines, web scrapers, and analytical dashboards that turn
+          complex data into clear, actionable decisions.
+        </p>
 
-          <div class="quick-info-list">
-            <div class="quick-info-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:andreverzoto@gmail.com">andreverzoto@gmail.com</a>
-            </div>
-            <div class="quick-info-item">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer">github.com/AVerz26</a>
-            </div>
-            <div class="quick-info-item">
-              <i class="fab fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/andre-verzoto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-            <div class="quick-info-item">
-              <i class="fas fa-briefcase"></i>
-              <a href="https://www.upwork.com/freelancers/andrev32" target="_blank" rel="noopener noreferrer">UpWork Profile</a>
-            </div>
-          </div>
+        <!-- CTA row -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-primary" id="cta-projects">
+            View Projects
+          </a>
+          <a href="#contact" class="btn-secondary" id="cta-contact">
+            Get in Touch
+          </a>
         </div>
 
-        <div class="profile-sidebar">
-          <img src="ovo.gif" alt="André Verzoto profile picture" class="profile-avatar" onerror="this.src='https://github.com/AVerz26.png'" />
-          
-          <div class="social-icons-row">
-            <a href="mailto:andreverzoto@gmail.com" class="social-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/andre-verzoto/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.upwork.com/freelancers/andrev32" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="UpWork"><i class="fas fa-briefcase"></i></a>
-          </div>
+        <!-- Social / contact links -->
+        <div class="hero-contacts">
+          <a href="mailto:andreverzoto@gmail.com" class="hero-contact-link" id="hero-email-link">
+            <i class="fas fa-envelope"></i> andreverzoto@gmail.com
+          </a>
+          <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" class="hero-contact-link" id="hero-github-link">
+            <i class="fab fa-github"></i> github.com/AVerz26
+          </a>
+          <a href="https://www.linkedin.com/in/andre-verzoto/" target="_blank" rel="noopener noreferrer" class="hero-contact-link" id="hero-linkedin-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://www.upwork.com/freelancers/andrev32" target="_blank" rel="noopener noreferrer" class="hero-contact-link" id="hero-upwork-link">
+            <i class="fas fa-briefcase"></i> Upwork
+          </a>
         </div>
       </div>
-    </header>
 
-    <main>
+      <!-- Avatar block -->
+      <div class="hero-avatar-wrap">
+        <img
+          src="https://github.com/AVerz26.png"
+          alt="André Verzoto"
+          class="hero-avatar"
+          onerror="this.src='https://ui-avatars.com/api/?name=Andre+Verzoto&background=c4884a&color=fff&size=160'"
+        />
+      </div>
 
-      <!-- 1. Professional Projects & Experience Timeline -->
-      <section id="experience" class="section">
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="main-wrapper">
+    <div class="container">
+
+      <!-- ===== PROJECTS GRID ===== -->
+      <section id="projects" class="section fade-in">
+        <div class="section-label">Portfolio</div>
         <h2 class="section-title">
-          <i class="fas fa-briefcase"></i> Professional Experience & Projects
+          Selected Projects
+          <span class="section-title-line"></span>
+        </h2>
+
+        <div class="projects-grid">
+
+          <!-- Card 1: Egg Carton Traceability -->
+          <a href="projects/egg-carton-traceability.html" class="project-card" id="card-egg-traceability">
+            <div class="project-card-header">
+              <div class="project-card-icon">
+                <i class="fas fa-boxes-stacked"></i>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square project-card-arrow"></i>
+            </div>
+            <div>
+              <div class="project-card-title">Egg Carton Full Traceability</div>
+              <div class="project-card-desc">
+                End-to-end tracking system from laying barn to shipment — automated via web scraping, Power Automate, and real-time Grafana dashboards.
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-card-tags">
+                <span class="tag-badge">Power Apps</span>
+                <span class="tag-badge">Python</span>
+                <span class="tag-badge">Grafana</span>
+              </div>
+              <span class="project-card-metric">R$200k/yr saved</span>
+            </div>
+          </a>
+
+          <!-- Card 2: Leads Finder -->
+          <a href="projects/streamlit-leads-finder.html" class="project-card" id="card-leads-finder">
+            <div class="project-card-header">
+              <div class="project-card-icon">
+                <i class="fas fa-magnifying-glass-location"></i>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square project-card-arrow"></i>
+            </div>
+            <div>
+              <div class="project-card-title">Streamlit Leads Finder App</div>
+              <div class="project-card-desc">
+                Automated market research app that finds, scrapes, and enriches sales leads by industry &amp; city — with interactive maps and one-click export.
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-card-tags">
+                <span class="tag-badge">Streamlit</span>
+                <span class="tag-badge">BeautifulSoup</span>
+                <span class="tag-badge">Geocoding</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3: Fuel Price Dashboard -->
+          <a href="projects/fuel-price-dashboard.html" class="project-card" id="card-fuel-price">
+            <div class="project-card-header">
+              <div class="project-card-icon">
+                <i class="fas fa-gas-pump"></i>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square project-card-arrow"></i>
+            </div>
+            <div>
+              <div class="project-card-title">Daily Fuel Price Tracker</div>
+              <div class="project-card-desc">
+                Automated Selenium + Requests pipeline that captures daily fuel prices, stores them in MySQL, and visualizes trends &amp; anomalies in Grafana.
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-card-tags">
+                <span class="tag-badge">Selenium</span>
+                <span class="tag-badge">MySQL</span>
+                <span class="tag-badge">ETL</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4: Zip Code Radius -->
+          <a href="projects/streamlit-zip-code-radius.html" class="project-card" id="card-zip-radius">
+            <div class="project-card-header">
+              <div class="project-card-icon">
+                <i class="fas fa-map-location-dot"></i>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square project-card-arrow"></i>
+            </div>
+            <div>
+              <div class="project-card-title">Zip Code Radius Tool</div>
+              <div class="project-card-desc">
+                Geographic tool: enter a city and a radius, instantly generate and download a structured spreadsheet of all postal codes within that area.
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-card-tags">
+                <span class="tag-badge">Streamlit</span>
+                <span class="tag-badge">Spatial Data</span>
+                <span class="tag-badge">OpenPyXL</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE TIMELINE ===== -->
+      <section id="experience" class="section fade-in">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">
+          Professional Experience
+          <span class="section-title-line"></span>
         </h2>
 
         <div class="timeline-container">
 
-          <!-- Milestone 1 -->
           <div class="timeline-entry">
             <div class="timeline-marker"></div>
             <div class="timeline-header">
-              <span class="timeline-role">Data Extraction, Automation & Analytics Solutions</span>
+              <span class="timeline-role">Data Extraction, Automation &amp; Analytics</span>
               <span class="timeline-date">Recent Work</span>
             </div>
-            <div class="timeline-org">End-to-End Business Intelligence & Process Optimization</div>
+            <div class="timeline-org">End-to-End Business Intelligence &amp; Process Optimization</div>
             <p class="timeline-description">
               Designing automated pipelines for multi-source data collection, web crawlers, ERP integrations, and operational dashboards that eliminate manual labor and generate measurable financial return.
             </p>
-
-            <div class="linked-projects-card">
-              <div class="linked-projects-header">
-                <span><i class="fas fa-layer-group"></i> Key Projects Developed</span>
-                <span class="accordion-help-text">Click to expand / collapse</span>
-              </div>
-
-              <!-- Project 1 (Expandable) -->
-              <details class="project-accordion" open>
-                <summary class="project-accordion-summary">
-                  <div class="accordion-title-left">
-                    <i class="fas fa-folder-open" style="color: var(--primary-color);"></i>
-                    <span class="accordion-project-name">Full Traceability of Egg Cartons from Laying Barns to Shipment</span>
-                  </div>
-                  <div class="accordion-title-right">
-                    <a href="projects/egg-carton-traceability.html" class="unit-link" onclick="event.stopPropagation();" title="View dedicated project page">
-                      <i class="fas fa-file-alt"></i> Case Study
-                    </a>
-                    <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" class="unit-link" onclick="event.stopPropagation();">
-                      <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                  </div>
-                </summary>
-                
-                <div class="project-accordion-body">
-                  <div class="project-highlight-badge">
-                    <i class="fas fa-chart-line"></i> Annual savings of R$ 200,000 & Improved Operational Efficiency
-                  </div>
-                  <p class="project-unit-desc">
-                    Developed an automated tracking solution using web scraping to collect data from third-party platforms, integrated the datasets into structured databases, and visualized the entire supply chain workflow in real-time Grafana dashboards.
-                  </p>
-                  <div class="project-img-container">
-                    <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/Captura%20de%20tela%202025-08-26%20163755.png" alt="Traceability Dashboard" class="project-img-preview" loading="lazy" />
-                  </div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                    <div class="tag-list">
-                      <span class="tag-badge">Power Apps</span>
-                      <span class="tag-badge">Power Automate</span>
-                      <span class="tag-badge">Python (Selenium + Pandas)</span>
-                      <span class="tag-badge">MySQL</span>
-                      <span class="tag-badge">Grafana</span>
-                    </div>
-                    <a href="projects/egg-carton-traceability.html" style="font-size: 0.85rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">
-                      Read Full Case Study &rarr;
-                    </a>
-                  </div>
-                </div>
-              </details>
-
-              <!-- Project 2 (Expandable) -->
-              <details class="project-accordion" open>
-                <summary class="project-accordion-summary">
-                  <div class="accordion-title-left">
-                    <i class="fas fa-folder-open" style="color: var(--primary-color);"></i>
-                    <span class="accordion-project-name">Streamlit Leads Finder App</span>
-                  </div>
-                  <div class="accordion-title-right">
-                    <a href="projects/streamlit-leads-finder.html" class="unit-link" onclick="event.stopPropagation();" title="View dedicated project page">
-                      <i class="fas fa-file-alt"></i> Case Study
-                    </a>
-                    <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" class="unit-link" onclick="event.stopPropagation();">
-                      <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                  </div>
-                </summary>
-
-                <div class="project-accordion-body">
-                  <p class="project-unit-desc">
-                    Automated market research application designed to find and enrich sales leads for targeted industries and geographic locations:
-                  </p>
-                  <ul class="project-bullets">
-                    <li>Searches for leads in a specific industry/area within a chosen city.</li>
-                    <li>Scrapes lead websites to automatically extract public emails and LinkedIn profiles.</li>
-                    <li>Consolidates all collected data into a unified, exportable DataFrame.</li>
-                    <li>Renders interactive geographical maps and filtered data tables directly in Streamlit.</li>
-                  </ul>
-                  <div class="project-img-container">
-                    <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/photo.png" alt="Leads Finder App Screenshot" class="project-img-preview" loading="lazy" />
-                  </div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                    <div class="tag-list">
-                      <span class="tag-badge">Python</span>
-                      <span class="tag-badge">Streamlit</span>
-                      <span class="tag-badge">Web Scraping (BS4, Requests)</span>
-                      <span class="tag-badge">Pandas</span>
-                      <span class="tag-badge">Geocoding</span>
-                    </div>
-                    <a href="projects/streamlit-leads-finder.html" style="font-size: 0.85rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">
-                      Read Full Project Details &rarr;
-                    </a>
-                  </div>
-                </div>
-              </details>
-
-            </div>
           </div>
 
-          <!-- Milestone 2 -->
           <div class="timeline-entry">
             <div class="timeline-marker"></div>
             <div class="timeline-header">
-              <span class="timeline-role">Automated Monitoring & Intelligence Systems</span>
+              <span class="timeline-role">Automated Monitoring &amp; Intelligence Systems</span>
               <span class="timeline-date">Continuous Delivery</span>
             </div>
-            <div class="timeline-org">Web Scraping, Data Warehousing & Geolocation Tools</div>
+            <div class="timeline-org">Web Scraping, Data Warehousing &amp; Geolocation Tools</div>
             <p class="timeline-description">
               Creating custom applications, scheduled scrapers, and database architectures for competitive intelligence and spatial data management.
             </p>
-
-            <div class="linked-projects-card">
-              <div class="linked-projects-header">
-                <span><i class="fas fa-layer-group"></i> Key Projects Developed</span>
-                <span class="accordion-help-text">Click to expand / collapse</span>
-              </div>
-
-              <!-- Project 3 (Expandable) -->
-              <details class="project-accordion" open>
-                <summary class="project-accordion-summary">
-                  <div class="accordion-title-left">
-                    <i class="fas fa-folder-open" style="color: var(--primary-color);"></i>
-                    <span class="accordion-project-name">Daily Fuel Price Tracking Dashboard</span>
-                  </div>
-                  <div class="accordion-title-right">
-                    <a href="projects/fuel-price-dashboard.html" class="unit-link" onclick="event.stopPropagation();" title="View dedicated project page">
-                      <i class="fas fa-file-alt"></i> Case Study
-                    </a>
-                    <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" class="unit-link" onclick="event.stopPropagation();">
-                      <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                  </div>
-                </summary>
-
-                <div class="project-accordion-body">
-                  <p class="project-unit-desc">
-                    Automated extraction pipeline for daily fuel pricing data using Selenium and Requests crawlers. Stores time-series data in MySQL and visualizes cost trends, variance, and anomalies via Grafana dashboards.
-                  </p>
-                  <div class="project-img-container">
-                    <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/sample4.png" alt="Fuel Price Tracking Dashboard" class="project-img-preview" loading="lazy" />
-                  </div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                    <div class="tag-list">
-                      <span class="tag-badge">Python (Requests + Selenium)</span>
-                      <span class="tag-badge">MySQL</span>
-                      <span class="tag-badge">Grafana</span>
-                      <span class="tag-badge">ETL</span>
-                    </div>
-                    <a href="projects/fuel-price-dashboard.html" style="font-size: 0.85rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">
-                      Read Full Project Details &rarr;
-                    </a>
-                  </div>
-                </div>
-              </details>
-
-              <!-- Project 4 (Expandable) -->
-              <details class="project-accordion" open>
-                <summary class="project-accordion-summary">
-                  <div class="accordion-title-left">
-                    <i class="fas fa-folder-open" style="color: var(--primary-color);"></i>
-                    <span class="accordion-project-name">Streamlit Zip Code Radius App</span>
-                  </div>
-                  <div class="accordion-title-right">
-                    <a href="projects/streamlit-zip-code-radius.html" class="unit-link" onclick="event.stopPropagation();" title="View dedicated project page">
-                      <i class="fas fa-file-alt"></i> Case Study
-                    </a>
-                    <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" class="unit-link" onclick="event.stopPropagation();">
-                      <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                  </div>
-                </summary>
-
-                <div class="project-accordion-body">
-                  <p class="project-unit-desc">
-                    Geographical tool where users input a city name and desired radius to generate and download an organized spreadsheet of all encompassing postal zip codes.
-                  </p>
-                  <div class="project-img-container">
-                    <img src="https://raw.githubusercontent.com/AVerz26/AVerz26/main/Captura%20de%20tela%202025-09-01%20112029.png" alt="Zip Code Radius App" class="project-img-preview" loading="lazy" />
-                  </div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                    <div class="tag-list">
-                      <span class="tag-badge">Python</span>
-                      <span class="tag-badge">Streamlit</span>
-                      <span class="tag-badge">Excel / OpenPyXL</span>
-                      <span class="tag-badge">Spatial Data</span>
-                    </div>
-                    <a href="projects/streamlit-zip-code-radius.html" style="font-size: 0.85rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">
-                      Read Full Project Details &rarr;
-                    </a>
-                  </div>
-                </div>
-              </details>
-
-            </div>
           </div>
 
         </div>
       </section>
 
-      <!-- 2. Academic Trajectory & Education Timeline -->
-      <section id="education" class="section">
+      <!-- ===== EDUCATION TIMELINE ===== -->
+      <section id="education" class="section fade-in">
+        <div class="section-label">Academic</div>
         <h2 class="section-title">
-          <i class="fas fa-graduation-cap"></i> Academic Trajectory & Education
+          Education
+          <span class="section-title-line"></span>
         </h2>
 
         <div class="timeline-container">
 
-          <!-- Education 1 -->
           <div class="timeline-entry">
             <div class="timeline-marker"></div>
             <div class="timeline-header">
-              <span class="timeline-role">MBA in Data Science & Analytics</span>
+              <span class="timeline-role">MBA in Data Science &amp; Analytics</span>
               <span class="timeline-date">Postgraduate</span>
             </div>
-            <div class="timeline-org">ESALQ / USP (Universidade de São Paulo)</div>
+            <div class="timeline-org">ESALQ / USP — Universidade de São Paulo</div>
             <p class="timeline-description">
               Specialization in statistical modeling, machine learning algorithms, database engineering, big data analytics, and data-driven business strategy.
             </p>
           </div>
 
-          <!-- Education 2 -->
           <div class="timeline-entry">
             <div class="timeline-marker"></div>
             <div class="timeline-header">
@@ -346,39 +280,40 @@
         </div>
       </section>
 
-      <!-- 3. Development Tools & Expertise -->
-      <section id="skills" class="section">
+      <!-- ===== SKILLS ===== -->
+      <section id="skills" class="section fade-in">
+        <div class="section-label">Expertise</div>
         <h2 class="section-title">
-          <i class="fas fa-tools"></i> Tools & Technical Expertise
+          Tools &amp; Technical Skills
+          <span class="section-title-line"></span>
         </h2>
 
         <div class="skills-container">
           <div class="skill-box">
-            <div class="skill-box-title"><i class="fas fa-code"></i> Programming & Databases</div>
-            <div class="skill-box-desc">Python, SQL (MySQL, PostgreSQL), Database structuring & optimization.</div>
+            <div class="skill-box-title"><i class="fas fa-code"></i> Programming &amp; Databases</div>
+            <div class="skill-box-desc">Python, SQL (MySQL, PostgreSQL), database structuring &amp; optimization.</div>
           </div>
-
           <div class="skill-box">
-            <div class="skill-box-title"><i class="fas fa-spider"></i> Data Extraction & Scraping</div>
+            <div class="skill-box-title"><i class="fas fa-spider"></i> Data Extraction &amp; Scraping</div>
             <div class="skill-box-desc">Web crawlers, automated scraping (Requests, BeautifulSoup, Selenium), multi-source data extraction.</div>
           </div>
-
           <div class="skill-box">
-            <div class="skill-box-title"><i class="fas fa-chart-pie"></i> Applications & Dashboards</div>
+            <div class="skill-box-title"><i class="fas fa-chart-pie"></i> Apps &amp; Dashboards</div>
             <div class="skill-box-desc">Streamlit, Microsoft Power Apps, Power BI, Grafana.</div>
           </div>
-
           <div class="skill-box">
-            <div class="skill-box-title"><i class="fas fa-cogs"></i> Automation & Workflow</div>
-            <div class="skill-box-desc">Power Automate, n8n, financial & production report automation (TOTVS Datasul, Excel).</div>
+            <div class="skill-box-title"><i class="fas fa-cogs"></i> Automation &amp; Workflow</div>
+            <div class="skill-box-desc">Power Automate, n8n, financial &amp; production report automation (TOTVS Datasul, Excel).</div>
           </div>
         </div>
       </section>
 
-      <!-- 4. Contact & Inquiries Section -->
-      <section id="contact" class="section">
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="section fade-in">
+        <div class="section-label">Let's Talk</div>
         <h2 class="section-title">
-          <i class="fas fa-paper-plane"></i> Contact & Get in Touch
+          Get in Touch
+          <span class="section-title-line"></span>
         </h2>
 
         <div class="contact-section-card">
@@ -392,8 +327,18 @@
             </button>
           </div>
 
-          <!-- Direct Send Contact Form -->
-          <form id="contact-form" class="contact-form">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formsubmit.co/andreverzoto@gmail.com"
+            method="POST"
+          >
+            <!-- FormSubmit config -->
+            <input type="hidden" name="_subject" value="[Portfolio] New Contact Message" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://averz26.github.io/portfolio-github-pages/#contact" />
+            <input type="hidden" name="_template" value="table" />
+
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name" class="form-label">Your Name</label>
@@ -406,33 +351,26 @@
             </div>
 
             <div class="form-group">
-              <label for="contact-subject" class="form-label">Email Title / Subject</label>
+              <label for="contact-subject" class="form-label">Subject</label>
               <input type="text" id="contact-subject" name="subject" class="form-control" placeholder="e.g. Data Extraction / Automation Project" required />
             </div>
 
             <div class="form-group">
-              <label for="contact-message" class="form-label">Message Body</label>
+              <label for="contact-message" class="form-label">Message</label>
               <textarea id="contact-message" name="message" class="form-control" placeholder="Write your message or inquiry here..." required></textarea>
             </div>
 
-            <div id="form-status" class="form-status-alert"></div>
-
             <button type="submit" id="submit-btn" class="submit-btn">
-              <i class="fas fa-paper-plane"></i> Send Message Directly
+              <i class="fas fa-paper-plane"></i> Send Message
             </button>
           </form>
         </div>
       </section>
 
-    </main>
+    </div><!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div>&copy; 2026 André Verzoto. All rights reserved.</div>
-      <div>Hosted via <a href="https://github.com/AVerz26" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">GitHub Pages</a></div>
-    </footer>
 
-  </div>
+  </div><!-- /.main-wrapper -->
 
   <div id="toast" class="toast-msg">Email copied to clipboard</div>
 
